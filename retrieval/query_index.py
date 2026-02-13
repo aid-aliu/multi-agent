@@ -1,66 +1,57 @@
 import json
+from typing import List, Dict, Any
+
 import faiss
 import numpy as np
 import requests
 
-from settings import (
-    FAISS_DIR,
-    OLLAMA_EMBED_MODEL,
-    TOP_K,
-)
+from retrieval.settings import FAISS_DIR, OLLAMA_EMBED_MODEL, TOP_K
 
-# -----------------------------
-# Query embedding
-# -----------------------------
 
 def embed_query(text: str) -> np.ndarray:
-    response = requests.post(
+    r = requests.post(
         "http://localhost:11434/api/embeddings",
-        json={
-            "model": OLLAMA_EMBED_MODEL,
-            "prompt": text,
-        },
+        json={"model": OLLAMA_EMBED_MODEL, "prompt": text},
         timeout=60,
     )
-    response.raise_for_status()
-    emb = response.json()["embedding"]
+    r.raise_for_status()
+    emb = r.json()["embedding"]
     return np.array([emb], dtype="float32")
 
 
-# -----------------------------
-# FAISS retrieval
-# -----------------------------
+def load_index():
+    return faiss.read_index(str(FAISS_DIR / "index.faiss"))
 
-def query_index(query: str, top_k: int = TOP_K):
-    index = faiss.read_index(str(FAISS_DIR / "index.faiss"))
 
+def load_metadatas() -> List[Dict[str, Any]]:
     with open(FAISS_DIR / "metadata.json", "r", encoding="utf-8") as f:
-        metadatas = json.load(f)
+        return json.load(f)
+
+
+def query_index(query: str, top_k: int = TOP_K) -> List[Dict[str, Any]]:
+    index = load_index()
+    metadatas = load_metadatas()
 
     qvec = embed_query(query)
     distances, indices = index.search(qvec, top_k)
 
-    results = []
+    out = []
     for rank, (idx, dist) in enumerate(zip(indices[0], distances[0]), start=1):
+        if idx < 0:
+            continue
         meta = metadatas[idx]
-        results.append({
+        out.append({
             "rank": rank,
+            "idx": int(idx),
             "distance": float(dist),
-            "doc_name": meta["doc_name"],
-            "page": meta["page"],
-            "section": meta["section"],
+            "doc_name": meta.get("doc_name"),
+            "page": meta.get("page"),
+            "section": meta.get("section"),
         })
+    return out
 
-    return results
-
-
-# -----------------------------
-# Manual test
-# -----------------------------
 
 if __name__ == "__main__":
-    query = "management of agitation in dementia patients"
-    hits = query_index(query)
-
-    for h in hits:
-        print(h)
+    q = "management of agitation in dementia patients"
+    for hit in query_index(q):
+        print(hit)
