@@ -1,0 +1,96 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "The evidence indicates that for managing agitation and behavioral symptoms in dementia, particularly aggression, a stepped care approach is recommended. Personalized activities are advised to promote engagement and reduce distress.",
+    "client_ready_email": {
+      "subject": "Guidance on Managing Aggression in Dementia",
+      "body": "Attached you will find the guidance from 'Dementia Assessment, Management and Support for People Living with Dementia and their Carers', which suggests using a stepped care approach and personalized activities to manage aggression in people living with dementia."
+    },
+    "action_list": [
+      {
+        "action": "Implement a stepped care approach to manage agitation and behavioral symptoms.",
+        "owner": "Nurse Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E1",
+          "E4"
+        ]
+      },
+      {
+        "action": "Offer personalized activities to promote engagement, pleasure, and interest for people living with dementia who experience agitation or aggression.",
+        "owner": "Activity Coordinator",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E2"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 29 | section 1.7.9 | chunk 2425"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "dementia-diag-mng-ab-pt | page 4 | section NO_SECTION | chunk 2571"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2898"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 38 | section NO_SECTION | chunk 2512"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 42 | section NO_SECTION | chunk 2533"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "dementia-diag-mng-ab-pt | page 4 | section NO_SECTION | chunk 2580"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 27 | section 1.7.2 | chunk 2412"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 12273
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 6882,
+      "queries": [
+        "Is there existing literature or guidance within the corpus on managing aggression in dementia patients?",
+        "What specific recommendations or strategies are provided for managing aggressive behavior in individuals with dementia?"
+      ],
+      "evidence_count": 9
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 29269
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 48425
+}

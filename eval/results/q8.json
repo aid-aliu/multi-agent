@@ -1,0 +1,86 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "This guideline outlines key components of diagnostic assessment for adults with possible autism or ASD but does not provide a specific pathway.",
+    "client_ready_email": {
+      "subject": "Guidance on Autism Diagnosis for Adults",
+      "body": "The provided evidence indicates that the guideline includes guidance on the key components and structure of a diagnostic assessment for adults with possible autism/ASD. However, it does not provide an explicit diagnosis pathway.\n\nPlease let us know if you need assistance in developing or referencing such a pathway."
+    },
+    "action_list": [
+      {
+        "action": "Identify or develop a specific pathway for diagnosing autism in adults.",
+        "owner": "Clinic Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "medium",
+        "evidence_refs": [
+          "E6"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "sign145 | page 25 | section 4.6 | chunk 3694"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "autism-spectrum-disorder-in-adults-diagnosis-and-management-pdf-35109567475909 | page 33 | section 1.8.2 | chunk 1671"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "sign145 | page 13 | section 3.2 | chunk 3576"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "sign145 | page 13 | section 3.1 | chunk 3575"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "sign145 | page 19 | section 4.2.2 | chunk 3638"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "sign145 | page 67 | section 4.2.2 | chunk 4080"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "sign145 | page 19 | section 4.2.2 | chunk 3646"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "sign145 | page 9 | section 1.2.1 | chunk 3533"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 12793
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 6732,
+      "queries": [
+        "What are the current diagnostic criteria and pathways for autism spectrum disorder (ASD)?",
+        "Which agencies or organizations provide guidelines for diagnosing ASD?"
+      ],
+      "evidence_count": 12
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 21009
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 40536
+}

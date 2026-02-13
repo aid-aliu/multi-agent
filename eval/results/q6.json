@@ -1,0 +1,87 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "The guideline emphasizes the importance of person-centred care and support for both individuals living with dementia and their carers. It also highlights the need for staff training to better address the needs of people with dementia.",
+    "client_ready_email": {
+      "subject": "Guidance on Supporting Carers of People Living with Dementia",
+      "body": "We have reviewed key recommendations from the 'Dementia: Assessment, Management and Support for People Living with Dementia and Their Carers' guideline. It stresses that carers should be supported through education and mentoring to enhance their role in providing care. Additionally, primary care appointments should include assessments of dementia-related needs for both individuals living with dementia and their carers. For more details, please refer to the attached document."
+    },
+    "action_list": [
+      {
+        "action": "Provide additional face-to-face training and mentoring to staff who deliver care and support to people living with dementia.",
+        "owner": "Nurse Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E3",
+          "E4"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 10 | section NO_SECTION | chunk 2234"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 10 | section NO_SECTION | chunk 2228"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 35 | section 1.13.2 | chunk 2501"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 19 | section 1.2.35 | chunk 2327"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 5 | section NO_SECTION | chunk 2201"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 7 | section NO_SECTION | chunk 2208"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2886"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "dementia-diag-mng-ab-pt | page 3 | section NO_SECTION | chunk 2562"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 13294
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 6885,
+      "queries": [
+        "What are the current best practices and recommendations for supporting carers of people with dementia?",
+        "Where can we find reliable sources of information related to this topic?"
+      ],
+      "evidence_count": 12
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 31990
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 52169
+}

@@ -1,0 +1,107 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "This document outlines the management of agitation in patients with dementia using a stepped care approach based on evidence from various sources. Psychosocial and environmental interventions are recommended as initial and ongoing management strategies to reduce distress.",
+    "client_ready_email": {
+      "subject": "Managing Agitation in Dementia Patients - Stepped Care Approach",
+      "body": "Dear Clinic Lead,\n\nAttached is a detailed document on managing agitation in dementia patients using a stepped care approach. This document includes evidence-based psychosocial and environmental interventions to reduce distress.\n\nKind regards,\nTechnical Writer"
+    },
+    "action_list": [
+      {
+        "action": "Review the evidence for management of agitation and behavioral symptoms in dementia.",
+        "owner": "Clinic Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E1",
+          "E4"
+        ]
+      },
+      {
+        "action": "Implement psychosocial interventions as initial management for agitation and behavioral symptoms in dementia patients.",
+        "owner": "Care Team",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E3",
+          "E6",
+          "E8"
+        ]
+      },
+      {
+        "action": "Utilize environmental interventions to reduce distress in people with dementia.",
+        "owner": "Nurse Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E7"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "dementia-diag-mng-ab-pt | page 17 | section NO_SECTION | chunk 2768"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "9789241550543-eng | page 18 | section NO_SECTION | chunk 182"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "dementia-diag-mng-ab-pt | page 7 | section NO_SECTION | chunk 2618"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 5 | section NO_SECTION | chunk 2198"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "dementia-diag-mng-ab-pt | page 10 | section NO_SECTION | chunk 2679"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "psy_module | page 15 | section NO_SECTION | chunk 3217"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 27 | section 1.7.2 | chunk 2412"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 16699
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 6885,
+      "queries": [
+        "What are the common causes of agitation in dementia patients?",
+        "What are effective interventions for managing agitation in dementia?"
+      ],
+      "evidence_count": 12
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 37597
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 61183
+}

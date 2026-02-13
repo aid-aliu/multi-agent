@@ -1,0 +1,79 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "The provided evidence includes general guidelines for psychosis and prevention strategies but does not specifically mention a detailed relapse prevention plan or specific recommendations beyond general management.",
+    "client_ready_email": {
+      "subject": "Guidance on Psychosis and Schizophrenia Prevention",
+      "body": "We have reviewed the documents and found general guidance on psychosis and schizophrenia prevention. However, specific relapse prevention strategies are not included in the provided evidence. Please let us know if you need further assistance or additional resources."
+    },
+    "action_list": [
+      {
+        "action": "Inform client that detailed relapse prevention strategies are missing.",
+        "owner": "Clinical Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "psychosis-and-schizophrenia-in-adults-prevention-and-management-pdf-248578083781 | page 18 | section NO_SECTION | chunk 2992"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "B1954-implementing-the-early-intervention-in-psychosis-access-and-waiting-time-standard | page 71 | section NO_SECTION | chunk 2155"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "psychosis-and-schizophrenia-in-adults-prevention-and-management-pdf-248578083781 | page 10 | section NO_SECTION | chunk 2939"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "psychosis-and-schizophrenia-in-adults-prevention-and-management-pdf-248578083781 | page 16 | section NO_SECTION | chunk 2972"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "psychosis-and-schizophrenia-in-adults-prevention-and-management-pdf-248578083781 | page 3 | section NO_SECTION | chunk 2910"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "psychosis-and-schizophrenia-in-adults-prevention-and-management-pdf-248578083781 | page 19 | section NO_SECTION | chunk 2993"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 12214
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 6842,
+      "queries": [
+        "Is there any mention of schizophrenia/psychosis relapse prevention in the corpus?",
+        "If not, what specific guidance or strategies related to relapse prevention are missing?"
+      ],
+      "evidence_count": 6
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 24569
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 43626
+}

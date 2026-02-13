@@ -1,0 +1,86 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "The guideline discusses pharmacological interventions for managing behavioral and psychological symptoms associated with dementia using a stepped care approach.",
+    "client_ready_email": {
+      "subject": "Guideline on Pharmacological Interventions for Dementia-Related Behavioral Symptoms",
+      "body": "Our guideline details the use of pharmacological interventions, particularly focusing on managing behavioral and psychological symptoms in dementia patients. These treatments should be part of a stepped care approach as outlined by the document."
+    },
+    "action_list": [
+      {
+        "action": "Implement a stepped care approach for managing agitation and BPSD using pharmacological interventions.",
+        "owner": "Care Team",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E4"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 3 | section 1.5 | chunk 2181"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 22 | section 1.5 | chunk 2365"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "dementia-diag-mng-ab-pt | page 19 | section NO_SECTION | chunk 2803"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "dementia-diag-mng-ab-pt | page 7 | section NO_SECTION | chunk 2618"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 38 | section NO_SECTION | chunk 2512"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "psychosis-and-schizophrenia-in-adults-prevention-and-management-pdf-248578083781 | page 7 | section NO_SECTION | chunk 2923"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "psy_module | page 20 | section NO_SECTION | chunk 3271"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 12359
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 6800,
+      "queries": [
+        "What are the current guidelines for pharmacological interventions in treating dementia-related behavioral symptoms?",
+        "Which drugs are recommended, and what are their primary benefits and potential side effects?"
+      ],
+      "evidence_count": 12
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 23972
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 43133
+}

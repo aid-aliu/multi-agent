@@ -1,0 +1,87 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "This deliverable outlines key actions based on the provided evidence related to pain management in individuals with dementia.",
+    "client_ready_email": {
+      "subject": "Best Practices for Pain Management Protocols for Dementia Agitation",
+      "body": "Attached is a summary of best practices for managing pain in people living with dementia, as per our evidence references. Please review and confirm implementation."
+    },
+    "action_list": [
+      {
+        "action": "Implement a stepwise treatment protocol to manage pain for people living with dementia.",
+        "owner": "Nurse Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E7"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "dementia-diag-mng-ab-pt | page 17 | section NO_SECTION | chunk 2768"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "dementia-diag-mng-ab-pt | page 7 | section NO_SECTION | chunk 2618"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 5 | section NO_SECTION | chunk 2198"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-diag-mng-ab-pt | page 10 | section NO_SECTION | chunk 2679"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "9789241550543-eng | page 17 | section 1.1 | chunk 173"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "9789241550543-eng | page 18 | section NO_SECTION | chunk 182"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 30 | section 1.8.4 | chunk 2440"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 30 | section 1.8.5 | chunk 2441"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 14735
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 8980,
+      "queries": [
+        "What are the leading causes of agitation in patients with dementia?",
+        "Which non-pharmacological interventions have shown effectiveness in managing pain-related symptoms in people with dementia?",
+        "What are the recommended pharmacological treatments for pain management in dementia patients experiencing agitation?"
+      ],
+      "evidence_count": 16
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 22057
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 45775
+}

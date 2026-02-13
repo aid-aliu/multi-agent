@@ -1,0 +1,95 @@
+{
+  "status": "ok",
+  "message": "Verifier passed deliverable.",
+  "result": {
+    "executive_summary": "The following non-pharmacological interventions are recommended for managing agitation in individuals living with dementia: offering psychosocial and environmental interventions (E2), providing personalized activities to promote engagement, pleasure, and interest (E6), and using a stepped care approach that includes specific alternatives to medication for agitation (E4). These recommendations are based on evidence provided by Alzheimer's UK and Nice guidelines.",
+    "client_ready_email": {
+      "subject": "Non-Pharmacological Interventions for Agitation in Dementia",
+      "body": "We have compiled the following non-pharmacological interventions based on evidence from Alzheimer's UK (E1, E2) and the National Institute for Health and Care Excellence (Nice) guidelines (E4, E6). For further details, please refer to the attached documents. Thank you."
+    },
+    "action_list": [
+      {
+        "action": "Offer psychosocial and environmental interventions to reduce distress in people living with dementia.",
+        "owner": "Care Team",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E2"
+        ]
+      },
+      {
+        "action": "Provide personalized activities to promote engagement, pleasure, and interest for individuals experiencing agitation or aggression.",
+        "owner": "Nurse Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "medium",
+        "evidence_refs": [
+          "E6"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "evidence_ref": "E1",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
+      },
+      {
+        "evidence_ref": "E2",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 27 | section 1.7.2 | chunk 2412"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "sign145 | page 12 | section 2.4 | chunk 3572"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2889"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 43 | section NO_SECTION | chunk 2536"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 29 | section 1.7.9 | chunk 2425"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "9789241550543-eng | page 33 | section NO_SECTION | chunk 301"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "9789241550543-eng | page 14 | section NO_SECTION | chunk 140"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "agent": "planner",
+      "status": "ok",
+      "duration_ms": 10720
+    },
+    {
+      "agent": "research",
+      "status": "found",
+      "duration_ms": 8446,
+      "queries": [
+        "What are the current evidence-based non-pharmacological interventions for managing agitation in dementia?",
+        "Where can I find reliable sources that detail these interventions?"
+      ],
+      "evidence_count": 12
+    },
+    {
+      "agent": "writer",
+      "status": "ok",
+      "duration_ms": 34530
+    },
+    {
+      "agent": "verifier",
+      "status": "ok",
+      "duration_ms": 0,
+      "issues_count": 0,
+      "issues": null
+    }
+  ],
+  "total_ms": 53698
+}
