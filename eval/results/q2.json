@@ -2,28 +2,28 @@
   "status": "ok",
   "message": "Verifier passed deliverable.",
   "result": {
-    "executive_summary": "The following non-pharmacological interventions are recommended for managing agitation in individuals living with dementia: offering psychosocial and environmental interventions (E2), providing personalized activities to promote engagement, pleasure, and interest (E6), and using a stepped care approach that includes specific alternatives to medication for agitation (E4). These recommendations are based on evidence provided by Alzheimer's UK and Nice guidelines.",
+    "executive_summary": "The document emphasizes the importance of conducting a structured assessment before starting any treatment for distress in people living with dementia, recommending psychosocial and environmental interventions as initial and ongoing management to reduce distress.",
     "client_ready_email": {
-      "subject": "Non-Pharmacological Interventions for Agitation in Dementia",
-      "body": "We have compiled the following non-pharmacological interventions based on evidence from Alzheimer's UK (E1, E2) and the National Institute for Health and Care Excellence (Nice) guidelines (E4, E6). For further details, please refer to the attached documents. Thank you."
+      "subject": "Summary of Non-Pharmacological Interventions for Agitation in Dementia",
+      "body": "Attached is a summary of non-pharmacological interventions for agitation in dementia based on evidence from the provided documents. For more details, please refer to the attached files."
     },
     "action_list": [
       {
-        "action": "Offer psychosocial and environmental interventions to reduce distress in people living with dementia.",
-        "owner": "Care Team",
+        "action": "Conduct structured assessment before starting any treatment.",
+        "owner": "Clinical Lead",
         "due_date": "Not found in sources.",
         "confidence": "high",
         "evidence_refs": [
-          "E2"
+          "E4"
         ]
       },
       {
-        "action": "Provide personalized activities to promote engagement, pleasure, and interest for individuals experiencing agitation or aggression.",
-        "owner": "Nurse Lead",
+        "action": "Offer psychosocial and environmental interventions to reduce distress.",
+        "owner": "Psychologist/Counselor",
         "due_date": "Not found in sources.",
         "confidence": "medium",
         "evidence_refs": [
-          "E6"
+          "E2"
         ]
       }
     ],
@@ -38,27 +38,27 @@
       },
       {
         "evidence_ref": "E3",
-        "citation": "sign145 | page 12 | section 2.4 | chunk 3572"
-      },
-      {
-        "evidence_ref": "E4",
-        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2889"
-      },
-      {
-        "evidence_ref": "E5",
         "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 43 | section NO_SECTION | chunk 2536"
       },
       {
+        "evidence_ref": "E4",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 27 | section 1.7.1 | chunk 2409"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "sign145 | page 12 | section 2.4 | chunk 3572"
+      },
+      {
         "evidence_ref": "E6",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 29 | section 1.7.9 | chunk 2425"
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2889"
       },
       {
         "evidence_ref": "E7",
-        "citation": "9789241550543-eng | page 33 | section NO_SECTION | chunk 301"
+        "citation": "9789241550543-eng | page 33 | section NO_SECTION | chunk 307"
       },
       {
         "evidence_ref": "E8",
-        "citation": "9789241550543-eng | page 14 | section NO_SECTION | chunk 140"
+        "citation": "B1954-implementing-the-early-intervention-in-psychosis-access-and-waiting-time-standard | page 16 | section 2.5 | chunk 1832"
       }
     ]
   },
@@ -66,22 +66,22 @@
     {
       "agent": "planner",
       "status": "ok",
-      "duration_ms": 10720
+      "duration_ms": 12163
     },
     {
       "agent": "research",
       "status": "found",
-      "duration_ms": 8446,
+      "duration_ms": 5821,
       "queries": [
-        "What are the current evidence-based non-pharmacological interventions for managing agitation in dementia?",
-        "Where can I find reliable sources that detail these interventions?"
+        "What are the current evidence-based non-pharmacological interventions for managing agitation in dementia patients?",
+        "Which interventions have shown the most effectiveness according to recent studies?"
       ],
       "evidence_count": 12
     },
     {
       "agent": "writer",
       "status": "ok",
-      "duration_ms": 34530
+      "duration_ms": 22310
     },
     {
       "agent": "verifier",
@@ -91,5 +91,5 @@
       "issues": null
     }
   ],
-  "total_ms": 53698
+  "total_ms": 40296
 }

@@ -1,11 +1,11 @@
 import json
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 import faiss
 import numpy as np
 import requests
 
-from retrieval.settings import FAISS_DIR, OLLAMA_EMBED_MODEL, TOP_K
+from .settings import FAISS_DIR, OLLAMA_EMBED_MODEL, TOP_K
 
 
 def embed_query(text: str) -> np.ndarray:
@@ -28,30 +28,79 @@ def load_metadatas() -> List[Dict[str, Any]]:
         return json.load(f)
 
 
-def query_index(query: str, top_k: int = TOP_K) -> List[Dict[str, Any]]:
+def infer_domain(doc_name: str) -> str:
+    n = (doc_name or "").lower()
+
+    if "adhd" in n or "attention-deficit" in n or "hyperactivity" in n:
+        return "adhd"
+    if "dementia" in n or "alzheim" in n:
+        return "dementia"
+    if "autism" in n or "asd" in n:
+        return "autism"
+    if "psychosis" in n or "schiz" in n or "sign145" in n or "sign-145" in n:
+        return "psychosis"
+    return "other"
+
+
+def query_index(
+    query: str,
+    top_k: int = TOP_K,
+    allowed_domains: Optional[List[str]] = None,
+    allowed_doc_ids: Optional[List[str]] = None,
+    overfetch: int = 50,
+) -> List[Dict[str, Any]]:
     index = load_index()
     metadatas = load_metadatas()
 
     qvec = embed_query(query)
-    distances, indices = index.search(qvec, top_k)
+
+    k = max(int(overfetch), int(top_k))
+    distances, indices = index.search(qvec, k)
 
     out = []
-    for rank, (idx, dist) in enumerate(zip(indices[0], distances[0]), start=1):
+    for idx, dist in zip(indices[0], distances[0]):
         if idx < 0:
             continue
-        meta = metadatas[idx]
-        out.append({
-            "rank": rank,
-            "idx": int(idx),
-            "distance": float(dist),
-            "doc_name": meta.get("doc_name"),
-            "page": meta.get("page"),
-            "section": meta.get("section"),
-        })
+
+        meta = metadatas[int(idx)]
+        doc_name = meta.get("doc_name")
+        doc_id = meta.get("doc_id") or doc_name
+
+        domain = meta.get("domain")
+        if not domain:
+            domain = infer_domain(doc_name)
+
+        if allowed_domains and domain not in allowed_domains:
+            continue
+        if allowed_doc_ids and doc_id not in allowed_doc_ids:
+            continue
+
+        out.append(
+            {
+                "rank": len(out) + 1,
+                "idx": int(idx),
+                "distance": float(dist),
+                "doc_name": doc_name,
+                "doc_id": doc_id,
+                "domain": domain,
+                "page": meta.get("page"),
+                "section": meta.get("section"),
+            }
+        )
+
+        if len(out) >= int(top_k):
+            break
+
     return out
 
 
 if __name__ == "__main__":
-    q = "management of agitation in dementia patients"
-    for hit in query_index(q):
+    q = "adult ADHD non-pharmacological treatment"
+
+    print("\n--- FILTERED (ADHD ONLY) ---")
+    for hit in query_index(q, top_k=6, allowed_domains=["adhd"]):
+        print(hit)
+
+    print("\n--- UNFILTERED (MIXED) ---")
+    for hit in query_index(q, top_k=6):
         print(hit)

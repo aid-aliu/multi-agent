@@ -2,54 +2,74 @@
   "status": "ok",
   "message": "Verifier passed deliverable.",
   "result": {
-    "executive_summary": "This guideline outlines key components of diagnostic assessment for adults with possible autism or ASD but does not provide a specific pathway.",
+    "executive_summary": "The evidence provides guidance on diagnostic procedures for autism spectrum disorder (ASD) in adults, including considerations for professionals involved and the components of a diagnostic assessment.",
     "client_ready_email": {
-      "subject": "Guidance on Autism Diagnosis for Adults",
-      "body": "The provided evidence indicates that the guideline includes guidance on the key components and structure of a diagnostic assessment for adults with possible autism/ASD. However, it does not provide an explicit diagnosis pathway.\n\nPlease let us know if you need assistance in developing or referencing such a pathway."
+      "subject": "Guidance on Autism Diagnosis Pathways for Adults",
+      "body": "Dear Client,\n\nWe have reviewed the available evidence regarding guidance on diagnosing autism spectrum disorder (ASD) in adults. The sources provide detailed information on how to approach diagnosis, including recommendations from professionals and key components of diagnostic assessments.\n\nPlease find attached a summary document outlining these guidelines.\n\nBest regards,\n[Your Name]"
     },
     "action_list": [
       {
-        "action": "Identify or develop a specific pathway for diagnosing autism in adults.",
-        "owner": "Clinic Lead",
+        "action": "Review and implement the recommended diagnostic procedures for ASD in adults.",
+        "owner": "Clinical Team",
         "due_date": "Not found in sources.",
-        "confidence": "medium",
+        "confidence": "high",
+        "evidence_refs": [
+          "E1",
+          "E2",
+          "E4"
+        ]
+      },
+      {
+        "action": "Ensure that staff who identify or assess autistic adults adapt procedures to ensure effective delivery, including setting modifications and pacing adjustments.",
+        "owner": "Clinical Team Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
         "evidence_refs": [
           "E6"
+        ]
+      },
+      {
+        "action": "Consider the key components of a diagnostic assessment for adults with possible ASD, including comprehensive assessments and physical examinations.",
+        "owner": "Clinical Team Lead",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E7"
         ]
       }
     ],
     "sources": [
       {
         "evidence_ref": "E1",
-        "citation": "sign145 | page 25 | section 4.6 | chunk 3694"
+        "citation": "sign145 | page 12 | section 2.1 | chunk 3554"
       },
       {
         "evidence_ref": "E2",
-        "citation": "autism-spectrum-disorder-in-adults-diagnosis-and-management-pdf-35109567475909 | page 33 | section 1.8.2 | chunk 1671"
+        "citation": "sign145 | page 13 | section 3.2 | chunk 3582"
       },
       {
         "evidence_ref": "E3",
-        "citation": "sign145 | page 13 | section 3.2 | chunk 3576"
+        "citation": "sign145 | page 75 | section NO_SECTION | chunk 4153"
       },
       {
         "evidence_ref": "E4",
-        "citation": "sign145 | page 13 | section 3.1 | chunk 3575"
+        "citation": "autism-spectrum-disorder-in-adults-diagnosis-and-management-pdf-35109567475909 | page 21 | section 1.2.17 | chunk 1531"
       },
       {
         "evidence_ref": "E5",
-        "citation": "sign145 | page 19 | section 4.2.2 | chunk 3638"
+        "citation": "sign145 | page 82 | section NO_SECTION | chunk 4628"
       },
       {
         "evidence_ref": "E6",
-        "citation": "sign145 | page 67 | section 4.2.2 | chunk 4080"
+        "citation": "autism-spectrum-disorder-in-adults-diagnosis-and-management-pdf-35109567475909 | page 16 | section 1.2.1 | chunk 1477"
       },
       {
         "evidence_ref": "E7",
-        "citation": "sign145 | page 19 | section 4.2.2 | chunk 3646"
+        "citation": "sign145 | page 67 | section 4.2.2 | chunk 4080"
       },
       {
         "evidence_ref": "E8",
-        "citation": "sign145 | page 9 | section 1.2.1 | chunk 3533"
+        "citation": "autism-spectrum-disorder-in-adults-diagnosis-and-management-pdf-35109567475909 | page 21 | section 1.2.16 | chunk 1528"
       }
     ]
   },
@@ -57,22 +77,22 @@
     {
       "agent": "planner",
       "status": "ok",
-      "duration_ms": 12793
+      "duration_ms": 9483
     },
     {
       "agent": "research",
       "status": "found",
-      "duration_ms": 6732,
+      "duration_ms": 5758,
       "queries": [
-        "What are the current diagnostic criteria and pathways for autism spectrum disorder (ASD)?",
-        "Which agencies or organizations provide guidelines for diagnosing ASD?"
+        "Are there established protocols or standard procedures for diagnosing autism within the healthcare industry?",
+        "What are the key factors and signs that professionals consider when diagnosing autism in children and adults?"
       ],
-      "evidence_count": 12
+      "evidence_count": 10
     },
     {
       "agent": "writer",
       "status": "ok",
-      "duration_ms": 21009
+      "duration_ms": 29134
     },
     {
       "agent": "verifier",
@@ -82,5 +102,5 @@
       "issues": null
     }
   ],
-  "total_ms": 40536
+  "total_ms": 44377
 }

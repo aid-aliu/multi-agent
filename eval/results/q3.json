@@ -2,19 +2,20 @@
   "status": "ok",
   "message": "Verifier passed deliverable.",
   "result": {
-    "executive_summary": "The guideline discusses pharmacological interventions for managing behavioral and psychological symptoms associated with dementia using a stepped care approach.",
+    "executive_summary": "The evidence indicates that pharmacological interventions for managing behavioral and psychological symptoms of dementia (BPSD) are discussed but lack specific recommendations.",
     "client_ready_email": {
-      "subject": "Guideline on Pharmacological Interventions for Dementia-Related Behavioral Symptoms",
-      "body": "Our guideline details the use of pharmacological interventions, particularly focusing on managing behavioral and psychological symptoms in dementia patients. These treatments should be part of a stepped care approach as outlined by the document."
+      "subject": "Guidance on Pharmacological Interventions for Dementia-related Behavioral Symptoms",
+      "body": "Based on the provided evidence, the guideline discusses pharmacological interventions for BPSD in dementia. However, no specific recommendations or actions are detailed."
     },
     "action_list": [
       {
-        "action": "Implement a stepped care approach for managing agitation and BPSD using pharmacological interventions.",
-        "owner": "Care Team",
+        "action": "Review current guidelines and literature for best practices.",
+        "owner": "Clinical Lead",
         "due_date": "Not found in sources.",
-        "confidence": "high",
+        "confidence": "medium",
         "evidence_refs": [
-          "E4"
+          "E2",
+          "E3"
         ]
       }
     ],
@@ -29,11 +30,11 @@
       },
       {
         "evidence_ref": "E3",
-        "citation": "dementia-diag-mng-ab-pt | page 19 | section NO_SECTION | chunk 2803"
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
       },
       {
         "evidence_ref": "E4",
-        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
+        "citation": "dementia-diag-mng-ab-pt | page 19 | section NO_SECTION | chunk 2803"
       },
       {
         "evidence_ref": "E5",
@@ -41,15 +42,7 @@
       },
       {
         "evidence_ref": "E6",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 38 | section NO_SECTION | chunk 2512"
-      },
-      {
-        "evidence_ref": "E7",
-        "citation": "psychosis-and-schizophrenia-in-adults-prevention-and-management-pdf-248578083781 | page 7 | section NO_SECTION | chunk 2923"
-      },
-      {
-        "evidence_ref": "E8",
-        "citation": "psy_module | page 20 | section NO_SECTION | chunk 3271"
+        "citation": "9789241550543-eng | page 57 | section NO_SECTION | chunk 520"
       }
     ]
   },
@@ -57,22 +50,22 @@
     {
       "agent": "planner",
       "status": "ok",
-      "duration_ms": 12359
+      "duration_ms": 9408
     },
     {
       "agent": "research",
       "status": "found",
-      "duration_ms": 6800,
+      "duration_ms": 6041,
       "queries": [
-        "What are the current guidelines for pharmacological interventions in treating dementia-related behavioral symptoms?",
-        "Which drugs are recommended, and what are their primary benefits and potential side effects?"
+        "What are the current guidelines on pharmacological interventions for managing dementia-related behavioral symptoms?",
+        "Which drugs are commonly prescribed, and what is their efficacy according to recent studies?"
       ],
-      "evidence_count": 12
+      "evidence_count": 6
     },
     {
       "agent": "writer",
       "status": "ok",
-      "duration_ms": 23972
+      "duration_ms": 16787
     },
     {
       "agent": "verifier",
@@ -82,5 +75,5 @@
       "issues": null
     }
   ],
-  "total_ms": 43133
+  "total_ms": 32238
 }

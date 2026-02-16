@@ -2,48 +2,29 @@
   "status": "ok",
   "message": "Verifier passed deliverable.",
   "result": {
-    "executive_summary": "The provided evidence includes detailed guidelines for the management of ADHD in adults, covering both pharmacological and non-pharmacological treatments.",
+    "executive_summary": "The evidence indicates that non-pharmacological treatments should be considered for adults with ADHD who have made an informed choice not to use medication or find it ineffective, as well as when symptoms persist despite medication. Medication remains the first-line treatment option for significant ADHD impairment.",
     "client_ready_email": {
       "subject": "Guidance on Adult ADHD Treatment",
-      "body": "Attached is a summary of the guidance on managing ADHD in adults. The document covers the use of medication and non-medication approaches, including specific recommendations for when to consider each method."
+      "body": "Dear [Client],\n\nOur analysis of the provided evidence indicates that non-pharmacological treatments are recommended for adults with ADHD who have specific conditions, such as making an informed choice against medication or finding it ineffective. Additionally, when symptoms persist despite medication, these treatments should be considered.\n\nPlease find detailed recommendations in E1 and E4.\n\nBest regards,\n[Your Name]"
     },
     "action_list": [
       {
-        "action": "Offer medication if adult AD/HD symptoms are still causing significant impairment after environmental modifications.",
-        "owner": "Clinic Lead",
-        "due_date": "Not found in sources.",
-        "confidence": "high",
-        "evidence_refs": [
-          "E3"
-        ]
-      },
-      {
-        "action": "Consider non-pharmacological treatments for adults with AD/HD who have not benefited from environmental modifications or medication.",
-        "owner": "Care Team",
+        "action": "Review non-pharmacological treatment options for adults with ADHD.",
+        "owner": "Clinical Lead",
         "due_date": "Not found in sources.",
         "confidence": "high",
         "evidence_refs": [
           "E1",
-          "E2"
+          "E3"
         ]
       },
       {
-        "action": "Offer a full program of CBT as part of non-pharmacological treatment when appropriate.",
-        "owner": "Nurse Lead",
+        "action": "Consider the use of medication as a first-line treatment option for adults with ADHD after environmental modifications have been implemented and reviewed.",
+        "owner": "Clinical Lead",
         "due_date": "Not found in sources.",
         "confidence": "high",
         "evidence_refs": [
-          "E4",
           "E6"
-        ]
-      },
-      {
-        "action": "Perform a comprehensive assessment including personal, educational, occupational and social functioning after transitioning adult patients to healthcare services.",
-        "owner": "Clinic Lead",
-        "due_date": "Not found in sources.",
-        "confidence": "high",
-        "evidence_refs": [
-          "E5"
         ]
       }
     ],
@@ -54,23 +35,23 @@
       },
       {
         "evidence_ref": "E2",
-        "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 22 | section 1.5.18 | chunk 1161"
+        "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 48 | section NO_SECTION | chunk 1318"
       },
       {
         "evidence_ref": "E3",
-        "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 22 | section 1.5.15 | chunk 1157"
-      },
-      {
-        "evidence_ref": "E4",
         "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 22 | section 1.5.17 | chunk 1160"
       },
       {
-        "evidence_ref": "E5",
+        "evidence_ref": "E4",
         "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 8 | section 1.1.6 | chunk 1048"
       },
       {
+        "evidence_ref": "E5",
+        "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 13 | section 1.4.1 | chunk 1089"
+      },
+      {
         "evidence_ref": "E6",
-        "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 48 | section NO_SECTION | chunk 1318"
+        "citation": "attention-deficit-hyperactivity-disorder-diagnosis-and-management-pdf-1837699732933 | page 22 | section 1.5.15 | chunk 1157"
       }
     ]
   },
@@ -78,22 +59,22 @@
     {
       "agent": "planner",
       "status": "ok",
-      "duration_ms": 11997
+      "duration_ms": 9448
     },
     {
       "agent": "research",
       "status": "found",
-      "duration_ms": 6862,
+      "duration_ms": 5859,
       "queries": [
-        "Is there any document that specifically discusses ADHD treatment for adults?",
-        "If no such documents exist, what type of document would be most useful to add?"
+        "Does the corpus contain information or guidelines on ADHD treatment specifically for adult patients?",
+        "If not, what types of documents are typically required to provide such guidance?"
       ],
       "evidence_count": 6
     },
     {
       "agent": "writer",
       "status": "ok",
-      "duration_ms": 46725
+      "duration_ms": 20374
     },
     {
       "agent": "verifier",
@@ -103,5 +84,5 @@
       "issues": null
     }
   ],
-  "total_ms": 65586
+  "total_ms": 35681
 }

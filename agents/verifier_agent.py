@@ -9,15 +9,6 @@ _E_REF_RE = re.compile(r"\bE(\d+)\b")
 
 
 def _collect_evidence_refs(deliverable: Dict[str, Any]) -> Set[str]:
-    """
-    Recursively collect all evidence references (E1, E2, etc.) from the deliverable.
-
-    Args:
-        deliverable: The deliverable dict to scan
-
-    Returns:
-        Set of evidence reference strings like {"E1", "E2"}
-    """
     refs: Set[str] = set()
 
     def walk(x):
@@ -36,55 +27,30 @@ def _collect_evidence_refs(deliverable: Dict[str, Any]) -> Set[str]:
 
 
 def _valid_ref_set(evidence: List[Dict[str, Any]]) -> Set[str]:
-    """
-    Generate the set of valid evidence references based on evidence list length.
-
-    Args:
-        evidence: List of evidence items
-
-    Returns:
-        Set of valid references like {"E1", "E2", "E3"}
-    """
     if not evidence:
         return set()
     return {f"E{i}" for i in range(1, len(evidence) + 1)}
 
 
 def _default_due_date() -> str:
-    """Return the standard 'not found' message for missing due dates."""
     return "Not found in sources."
 
 
+def _is_not_found_text(x: Any) -> bool:
+    return isinstance(x, str) and x.strip().lower() == "not found in sources."
+
+
 def verify_deliverable(
-        writer_output: Dict[str, Any],
-        research_output: Dict[str, Any],
+    writer_output: Dict[str, Any],
+    research_output: Dict[str, Any],
 ) -> Dict[str, Any]:
-    """
-    Verify that a deliverable follows all constraints and references valid evidence.
 
-    Args:
-        writer_output: Output from write_deliverable()
-        research_output: Output from ResearchAgent
-
-    Returns:
-        Dict with verification status, issues, and deliverable
-    """
-    # Validate inputs
     if not isinstance(writer_output, dict):
-        return {
-            "status": "error",
-            "message": "writer_output must be a dict",
-            "issues": [],
-        }
+        return {"status": "error", "message": "writer_output must be a dict", "issues": []}
 
     if not isinstance(research_output, dict):
-        return {
-            "status": "error",
-            "message": "research_output must be a dict",
-            "issues": [],
-        }
+        return {"status": "error", "message": "research_output must be a dict", "issues": []}
 
-    # Check writer status
     if writer_output.get("status") != "ok":
         return {
             "status": "blocked",
@@ -93,7 +59,6 @@ def verify_deliverable(
             "issues": [],
         }
 
-    # Check research status
     if research_output.get("status") != "found":
         return {
             "status": "blocked",
@@ -101,7 +66,6 @@ def verify_deliverable(
             "issues": [],
         }
 
-    # Extract deliverable
     deliverable = writer_output.get("deliverable")
     if not deliverable or not isinstance(deliverable, dict):
         return {
@@ -121,7 +85,79 @@ def verify_deliverable(
     valid_refs = _valid_ref_set(evidence)
     issues: List[Dict[str, Any]] = []
 
-    # Check 1: Verify all evidence refs in deliverable are valid
+    # --- REQUIRED FIELDS ---
+    required_fields = ["executive_summary", "client_ready_email", "action_list", "sources"]
+    for field in required_fields:
+        if field not in deliverable:
+            issues.append({
+                "type": "missing_required_field",
+                "detail": f"Deliverable missing required field: '{field}'",
+                "severity": "error",
+            })
+
+    # --- EXEC SUMMARY CHECKS ---
+    exec_summary = deliverable.get("executive_summary")
+    if _is_not_found_text(exec_summary):
+        issues.append({
+            "type": "invalid_not_found_executive_summary",
+            "detail": "Executive summary is 'Not found in sources.' despite evidence being available.",
+            "severity": "error",
+        })
+    elif isinstance(exec_summary, str):
+        wc = len(exec_summary.split())
+        if wc > 150:
+            issues.append({
+                "type": "executive_summary_too_long",
+                "detail": f"Executive summary has {wc} words (max 150).",
+                "severity": "error",
+            })
+    else:
+        issues.append({
+            "type": "missing_or_invalid_executive_summary",
+            "detail": "executive_summary must be a non-empty string.",
+            "severity": "error",
+        })
+
+    # --- EMAIL CHECKS ---
+    email = deliverable.get("client_ready_email")
+    if not isinstance(email, dict):
+        issues.append({
+            "type": "invalid_email_structure",
+            "detail": "client_ready_email must be a dict",
+            "severity": "error",
+        })
+        email = {}
+
+    subj = email.get("subject")
+    body = email.get("body")
+
+    if _is_not_found_text(subj):
+        issues.append({
+            "type": "invalid_not_found_email_subject",
+            "detail": "Email subject is 'Not found in sources.' despite evidence being available.",
+            "severity": "error",
+        })
+    if _is_not_found_text(body):
+        issues.append({
+            "type": "invalid_not_found_email_body",
+            "detail": "Email body is 'Not found in sources.' despite evidence being available.",
+            "severity": "error",
+        })
+
+    if "subject" not in email:
+        issues.append({
+            "type": "missing_email_subject",
+            "detail": "client_ready_email missing 'subject' field",
+            "severity": "warning",
+        })
+    if "body" not in email:
+        issues.append({
+            "type": "missing_email_body",
+            "detail": "client_ready_email missing 'body' field",
+            "severity": "warning",
+        })
+
+    # --- EVIDENCE REF CHECKS (GLOBAL) ---
     used_refs = _collect_evidence_refs(deliverable)
     bad_refs = sorted(r for r in used_refs if r not in valid_refs)
     if bad_refs:
@@ -131,7 +167,7 @@ def verify_deliverable(
             "severity": "error",
         })
 
-    # Check 2: Verify action_list structure and requirements
+    # --- ACTION LIST CHECKS ---
     action_list = deliverable.get("action_list")
 
     if action_list is None:
@@ -140,7 +176,7 @@ def verify_deliverable(
             "detail": "Deliverable missing 'action_list' field.",
             "severity": "error",
         })
-        action_list = []  # Set to empty to avoid further errors
+        action_list = []
     elif not isinstance(action_list, list):
         issues.append({
             "type": "invalid_action_list_type",
@@ -148,6 +184,14 @@ def verify_deliverable(
             "severity": "error",
         })
         action_list = []
+
+    # Enforce at least 1 action when evidence exists
+    if isinstance(action_list, list) and len(action_list) == 0:
+        issues.append({
+            "type": "empty_action_list",
+            "detail": "Evidence exists but action_list is empty. Must include at least 1 supported action.",
+            "severity": "error",
+        })
 
     for i, action in enumerate(action_list, start=1):
         if not isinstance(action, dict):
@@ -158,9 +202,7 @@ def verify_deliverable(
             })
             continue
 
-        # Check evidence_refs field
         refs = action.get("evidence_refs")
-
         if refs is None or (isinstance(refs, list) and len(refs) == 0):
             issues.append({
                 "type": "missing_evidence_refs",
@@ -177,7 +219,6 @@ def verify_deliverable(
             })
             continue
 
-        # Check for unknown evidence refs
         unknown = [r for r in refs if r not in valid_refs]
         if unknown:
             issues.append({
@@ -186,7 +227,6 @@ def verify_deliverable(
                 "severity": "error",
             })
 
-        # Check confidence value
         conf = (action.get("confidence") or "").lower()
         if conf not in {"high", "medium", "low"}:
             issues.append({
@@ -195,7 +235,6 @@ def verify_deliverable(
                 "severity": "warning",
             })
 
-        # Check/fix due_date
         due_date = action.get("due_date")
         if not due_date or (isinstance(due_date, str) and not due_date.strip()):
             action["due_date"] = _default_due_date()
@@ -205,40 +244,7 @@ def verify_deliverable(
                 "severity": "warning",
             })
 
-    # Check 3: Verify required top-level fields exist
-    required_fields = ["executive_summary", "client_ready_email", "action_list", "sources"]
-    for field in required_fields:
-        if field not in deliverable:
-            issues.append({
-                "type": "missing_required_field",
-                "detail": f"Deliverable missing required field: '{field}'",
-                "severity": "error",
-            })
-
-    # Check 4: Verify client_ready_email structure
-    email = deliverable.get("client_ready_email")
-    if email:
-        if not isinstance(email, dict):
-            issues.append({
-                "type": "invalid_email_structure",
-                "detail": "client_ready_email must be a dict",
-                "severity": "error",
-            })
-        else:
-            if "subject" not in email:
-                issues.append({
-                    "type": "missing_email_subject",
-                    "detail": "client_ready_email missing 'subject' field",
-                    "severity": "warning",
-                })
-            if "body" not in email:
-                issues.append({
-                    "type": "missing_email_body",
-                    "detail": "client_ready_email missing 'body' field",
-                    "severity": "warning",
-                })
-
-    # Determine final status
+    # --- FINAL DECISION ---
     error_issues = [issue for issue in issues if issue.get("severity") == "error"]
 
     if error_issues:
@@ -269,60 +275,43 @@ def verify_deliverable(
 
 
 if __name__ == "__main__":
-    import json
+    import json as _json
 
-    # Mock data for testing without dependencies
     mock_research = {
         "status": "found",
-        "evidence": [
-            {"text": "Evidence 1", "citation": "Doc1"},
-            {"text": "Evidence 2", "citation": "Doc2"},
-        ]
+        "evidence": [{"text": "Evidence 1", "citation": "Doc1"}, {"text": "Evidence 2", "citation": "Doc2"}],
     }
 
-    # Valid deliverable
     mock_writer_ok = {
         "status": "ok",
         "deliverable": {
             "executive_summary": "Test summary with E1 reference",
-            "client_ready_email": {
-                "subject": "Test",
-                "body": "Email body with E2"
-            },
+            "client_ready_email": {"subject": "Test", "body": "Email body with E2"},
             "action_list": [
                 {
                     "action": "Do something",
                     "owner": "Team Lead",
                     "due_date": "2024-12-31",
                     "confidence": "high",
-                    "evidence_refs": ["E1", "E2"]
+                    "evidence_refs": ["E1", "E2"],
                 }
             ],
-            "sources": []
-        }
+            "sources": [],
+        },
     }
 
-    # Invalid deliverable (bad refs, missing fields)
     mock_writer_bad = {
         "status": "ok",
         "deliverable": {
-            "executive_summary": "Test with E99",  # Invalid ref
-            "action_list": [
-                {
-                    "action": "Do something",
-                    "owner": "Team Lead",
-                    # Missing due_date
-                    "confidence": "invalid_value",  # Invalid confidence
-                    "evidence_refs": []  # Empty refs
-                }
-            ]
-        }
+            "executive_summary": "Not found in sources.",
+            "client_ready_email": {"subject": "Not found in sources.", "body": "Not found in sources."},
+            "action_list": [],
+            "sources": [],
+        },
     }
 
     print("=== Testing valid deliverable ===")
-    result = verify_deliverable(mock_writer_ok, mock_research)
-    print(json.dumps(result, indent=2))
+    print(_json.dumps(verify_deliverable(mock_writer_ok, mock_research), indent=2))
 
     print("\n=== Testing invalid deliverable ===")
-    result = verify_deliverable(mock_writer_bad, mock_research)
-    print(json.dumps(result, indent=2))
+    print(_json.dumps(verify_deliverable(mock_writer_bad, mock_research), indent=2))

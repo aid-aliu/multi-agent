@@ -2,48 +2,58 @@
   "status": "ok",
   "message": "Verifier passed deliverable.",
   "result": {
-    "executive_summary": "The evidence indicates that for managing agitation and behavioral symptoms in dementia, particularly aggression, a stepped care approach is recommended. Personalized activities are advised to promote engagement and reduce distress.",
+    "executive_summary": "The evidence supports offering personalized activities to people living with dementia who experience agitation or aggression, as well as using a stepped care approach for managing behavioral and psychological symptoms. Risperidone and haloperidol are prescribed under specific conditions due to their limited marketing authorizations.",
     "client_ready_email": {
       "subject": "Guidance on Managing Aggression in Dementia",
-      "body": "Attached you will find the guidance from 'Dementia Assessment, Management and Support for People Living with Dementia and their Carers', which suggests using a stepped care approach and personalized activities to manage aggression in people living with dementia."
+      "body": "Attached is the guidance we have from our documents. Personalized activities can be offered to manage aggression. For medical interventions, risperidone and haloperidol are used under specific conditions due to their limited marketing authorizations."
     },
     "action_list": [
       {
-        "action": "Implement a stepped care approach to manage agitation and behavioral symptoms.",
-        "owner": "Nurse Lead",
+        "action": "Offer personalized activities to promote engagement, pleasure, and interest for people with dementia who experience agitation or aggression.",
+        "owner": "Dementia Care Team",
         "due_date": "Not found in sources.",
         "confidence": "high",
         "evidence_refs": [
           "E1",
-          "E4"
+          "E7"
         ]
       },
       {
-        "action": "Offer personalized activities to promote engagement, pleasure, and interest for people living with dementia who experience agitation or aggression.",
-        "owner": "Activity Coordinator",
+        "action": "Use a stepped care approach for managing behavioral and psychological symptoms of dementia (BPSD).",
+        "owner": "Dementia Care Team",
         "due_date": "Not found in sources.",
         "confidence": "high",
         "evidence_refs": [
-          "E2"
+          "E3",
+          "E7"
+        ]
+      },
+      {
+        "action": "Prescribe risperidone or haloperidol only when non-pharmacological approaches have failed and there is a risk of harm to self or others, as per their specific marketing authorizations.",
+        "owner": "Medical Staff",
+        "due_date": "Not found in sources.",
+        "confidence": "high",
+        "evidence_refs": [
+          "E5"
         ]
       }
     ],
     "sources": [
       {
         "evidence_ref": "E1",
-        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
-      },
-      {
-        "evidence_ref": "E2",
         "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 29 | section 1.7.9 | chunk 2425"
       },
       {
-        "evidence_ref": "E3",
+        "evidence_ref": "E2",
         "citation": "dementia-diag-mng-ab-pt | page 4 | section NO_SECTION | chunk 2571"
       },
       {
+        "evidence_ref": "E3",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
+      },
+      {
         "evidence_ref": "E4",
-        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2898"
+        "citation": "dementia-diag-mng-ab-pt | page 20 | section NO_SECTION | chunk 2826"
       },
       {
         "evidence_ref": "E5",
@@ -51,15 +61,15 @@
       },
       {
         "evidence_ref": "E6",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 42 | section NO_SECTION | chunk 2533"
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 33 | section 1.11.1 | chunk 2477"
       },
       {
         "evidence_ref": "E7",
-        "citation": "dementia-diag-mng-ab-pt | page 4 | section NO_SECTION | chunk 2580"
+        "citation": "dementia-diag-mng-ab-pt | page 7 | section NO_SECTION | chunk 2618"
       },
       {
         "evidence_ref": "E8",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 27 | section 1.7.2 | chunk 2412"
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 16 | section 1.2.12 | chunk 2294"
       }
     ]
   },
@@ -67,30 +77,30 @@
     {
       "agent": "planner",
       "status": "ok",
-      "duration_ms": 12273
+      "duration_ms": 9320
     },
     {
       "agent": "research",
       "status": "found",
-      "duration_ms": 6882,
+      "duration_ms": 5808,
       "queries": [
-        "Is there existing literature or guidance within the corpus on managing aggression in dementia patients?",
-        "What specific recommendations or strategies are provided for managing aggressive behavior in individuals with dementia?"
+        "Is there specific information regarding methods to manage aggression in individuals with dementia within the corpus?",
+        "Does the corpus provide any studies or guidelines related to handling aggressive behavior in people suffering from dementia?"
       ],
-      "evidence_count": 9
+      "evidence_count": 8
     },
     {
       "agent": "writer",
       "status": "ok",
-      "duration_ms": 29269
+      "duration_ms": 27284
     },
     {
       "agent": "verifier",
       "status": "ok",
-      "duration_ms": 0,
+      "duration_ms": 1,
       "issues_count": 0,
       "issues": null
     }
   ],
-  "total_ms": 48425
+  "total_ms": 42415
 }

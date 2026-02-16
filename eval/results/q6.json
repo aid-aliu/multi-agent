@@ -2,55 +2,56 @@
   "status": "ok",
   "message": "Verifier passed deliverable.",
   "result": {
-    "executive_summary": "The guideline emphasizes the importance of person-centred care and support for both individuals living with dementia and their carers. It also highlights the need for staff training to better address the needs of people with dementia.",
+    "executive_summary": "This document emphasizes the importance of supporting carers of people living with dementia, highlighting their vital role and increased risk of depression. Education and support programs are recommended to enhance carer resilience and provide them with necessary knowledge and resources.",
     "client_ready_email": {
-      "subject": "Guidance on Supporting Carers of People Living with Dementia",
-      "body": "We have reviewed key recommendations from the 'Dementia: Assessment, Management and Support for People Living with Dementia and Their Carers' guideline. It stresses that carers should be supported through education and mentoring to enhance their role in providing care. Additionally, primary care appointments should include assessments of dementia-related needs for both individuals living with dementia and their carers. For more details, please refer to the attached document."
+      "subject": "Recommendations for Supporting Carers of People Living with Dementia",
+      "body": "Dear [Client],\n\nBased on the guidelines provided by Nice (2025) in 'Dementia: Assessment, Management and Support for People Living with Dementia and Their Carers', it is crucial to support carers through education and training programs. These initiatives should aim at enhancing their resilience and providing them with the necessary information and resources.\n\nBest regards,\n[Your Name]"
     },
     "action_list": [
       {
-        "action": "Provide additional face-to-face training and mentoring to staff who deliver care and support to people living with dementia.",
-        "owner": "Nurse Lead",
+        "action": "Implement a carer-focused education program",
+        "owner": "CARER_COORDINATOR",
         "due_date": "Not found in sources.",
         "confidence": "high",
         "evidence_refs": [
-          "E3",
-          "E4"
+          "E4",
+          "E5",
+          "E8"
         ]
       }
     ],
     "sources": [
       {
         "evidence_ref": "E1",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 10 | section NO_SECTION | chunk 2234"
-      },
-      {
-        "evidence_ref": "E2",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 10 | section NO_SECTION | chunk 2228"
-      },
-      {
-        "evidence_ref": "E3",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 35 | section 1.13.2 | chunk 2501"
-      },
-      {
-        "evidence_ref": "E4",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 19 | section 1.2.35 | chunk 2327"
-      },
-      {
-        "evidence_ref": "E5",
         "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 5 | section NO_SECTION | chunk 2201"
       },
       {
+        "evidence_ref": "E2",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 10 | section NO_SECTION | chunk 2234"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 7 | section NO_SECTION | chunk 2211"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 34 | section 1.11.5 | chunk 2486"
+      },
+      {
+        "evidence_ref": "E5",
+        "citation": "dementia-diag-mng-ab-pt | page 8 | section NO_SECTION | chunk 2635"
+      },
+      {
         "evidence_ref": "E6",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 7 | section NO_SECTION | chunk 2208"
+        "citation": "9789241550543-eng | page 7 | section NO_SECTION | chunk 61"
       },
       {
         "evidence_ref": "E7",
-        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2886"
+        "citation": "B1954-implementing-the-early-intervention-in-psychosis-access-and-waiting-time-standard | page 25 | section NO_SECTION | chunk 1872"
       },
       {
         "evidence_ref": "E8",
-        "citation": "dementia-diag-mng-ab-pt | page 3 | section NO_SECTION | chunk 2562"
+        "citation": "dementia-diag-mng-ab-pt | page 7 | section NO_SECTION | chunk 2620"
       }
     ]
   },
@@ -58,30 +59,30 @@
     {
       "agent": "planner",
       "status": "ok",
-      "duration_ms": 13294
+      "duration_ms": 9724
     },
     {
       "agent": "research",
       "status": "found",
-      "duration_ms": 6885,
+      "duration_ms": 5861,
       "queries": [
-        "What are the current best practices and recommendations for supporting carers of people with dementia?",
-        "Where can we find reliable sources of information related to this topic?"
+        "What are the key challenges faced by carers of people with dementia?",
+        "What educational resources and support systems exist for carers?"
       ],
       "evidence_count": 12
     },
     {
       "agent": "writer",
       "status": "ok",
-      "duration_ms": 31990
+      "duration_ms": 21393
     },
     {
       "agent": "verifier",
       "status": "ok",
-      "duration_ms": 0,
+      "duration_ms": 1,
       "issues_count": 0,
       "issues": null
     }
   ],
-  "total_ms": 52169
+  "total_ms": 36979
 }

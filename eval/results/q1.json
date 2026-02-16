@@ -1,16 +1,16 @@
 {
-  "status": "ok",
-  "message": "Verifier passed deliverable.",
+  "status": "blocked",
+  "message": "Verifier blocked deliverable due to 1 error(s).",
   "result": {
-    "executive_summary": "This document outlines the management of agitation in patients with dementia using a stepped care approach based on evidence from various sources. Psychosocial and environmental interventions are recommended as initial and ongoing management strategies to reduce distress.",
+    "executive_summary": "This document outlines a stepped care approach to managing agitation in people living with dementia, emphasizing non-pharmacological interventions such as personalized activities and psychosocial support.",
     "client_ready_email": {
-      "subject": "Managing Agitation in Dementia Patients - Stepped Care Approach",
-      "body": "Dear Clinic Lead,\n\nAttached is a detailed document on managing agitation in dementia patients using a stepped care approach. This document includes evidence-based psychosocial and environmental interventions to reduce distress.\n\nKind regards,\nTechnical Writer"
+      "subject": "Stepped Care Approach for Managing Agitation in Dementia Patients",
+      "body": "Dear Clinic Lead,\n\nWe are pleased to provide you with a detailed plan for managing agitation in patients living with dementia. The document includes non-pharmacological interventions such as personalized activities, psychosocial support, and pain management protocols.\n\nSincerely,\n[Your Name]"
     },
     "action_list": [
       {
-        "action": "Review the evidence for management of agitation and behavioral symptoms in dementia.",
-        "owner": "Clinic Lead",
+        "action": "Implement a stepped care approach",
+        "owner": "Clinical Lead",
         "due_date": "Not found in sources.",
         "confidence": "high",
         "evidence_refs": [
@@ -19,58 +19,67 @@
         ]
       },
       {
-        "action": "Implement psychosocial interventions as initial management for agitation and behavioral symptoms in dementia patients.",
-        "owner": "Care Team",
+        "action": "Offer personalized activities to promote engagement",
+        "owner": "Activity Coordinator",
         "due_date": "Not found in sources.",
-        "confidence": "high",
+        "confidence": "medium",
         "evidence_refs": [
-          "E3",
-          "E6",
-          "E8"
+          "E3"
         ]
       },
       {
-        "action": "Utilize environmental interventions to reduce distress in people with dementia.",
-        "owner": "Nurse Lead",
+        "action": "Provide psychosocial and environmental interventions",
+        "owner": "Psychologist/Therapist",
         "due_date": "Not found in sources.",
         "confidence": "high",
-        "evidence_refs": [
+        "evidenceRefs": [
+          "E5",
           "E7"
+        ],
+        "evidence_refs": []
+      },
+      {
+        "action": "Consider a stepwise treatment protocol for pain management",
+        "owner": "Pain Management Specialist",
+        "due_date": "Not found in sources.",
+        "confidence": "low",
+        "evidence_refs": [
+          "E6"
         ]
       }
     ],
     "sources": [
       {
         "evidence_ref": "E1",
-        "citation": "dementia-diag-mng-ab-pt | page 17 | section NO_SECTION | chunk 2768"
-      },
-      {
-        "evidence_ref": "E2",
-        "citation": "9789241550543-eng | page 18 | section NO_SECTION | chunk 182"
-      },
-      {
-        "evidence_ref": "E3",
-        "citation": "dementia-diag-mng-ab-pt | page 7 | section NO_SECTION | chunk 2618"
-      },
-      {
-        "evidence_ref": "E4",
-        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 5 | section NO_SECTION | chunk 2198"
-      },
-      {
-        "evidence_ref": "E5",
-        "citation": "dementia-diag-mng-ab-pt | page 10 | section NO_SECTION | chunk 2679"
-      },
-      {
-        "evidence_ref": "E6",
-        "citation": "psy_module | page 15 | section NO_SECTION | chunk 3217"
-      },
-      {
-        "evidence_ref": "E7",
         "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2888"
       },
       {
-        "evidence_ref": "E8",
+        "evidence_ref": "E2",
+        "citation": "dementia-diag-mng-ab-pt | page 2 | section NO_SECTION | chunk 2542"
+      },
+      {
+        "evidence_ref": "E3",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 29 | section 1.7.9 | chunk 2425"
+      },
+      {
+        "evidence_ref": "E4",
+        "citation": "dementia-diag-mng-ab-pt | page 17 | section NO_SECTION | chunk 2768"
+      },
+      {
+        "evidence_ref": "E5",
         "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 27 | section 1.7.2 | chunk 2412"
+      },
+      {
+        "evidence_ref": "E6",
+        "citation": "dementia-assessment-management-and-support-for-people-living-with-dementia-and-their-carers-pdf-1837760199109 | page 30 | section 1.8.4 | chunk 2440"
+      },
+      {
+        "evidence_ref": "E7",
+        "citation": "sign145 | page 12 | section 2.4 | chunk 3572"
+      },
+      {
+        "evidence_ref": "E8",
+        "citation": "dementia-diag-mng-ab-pt | page 24 | section NO_SECTION | chunk 2889"
       }
     ]
   },
@@ -78,30 +87,36 @@
     {
       "agent": "planner",
       "status": "ok",
-      "duration_ms": 16699
+      "duration_ms": 9383
     },
     {
       "agent": "research",
       "status": "found",
-      "duration_ms": 6885,
+      "duration_ms": 5837,
       "queries": [
-        "What are the common causes of agitation in dementia patients?",
-        "What are effective interventions for managing agitation in dementia?"
+        "What are the current best practices for managing agitation in dementia patients?",
+        "What are some effective non-pharmacological interventions for reducing agitation?"
       ],
       "evidence_count": 12
     },
     {
       "agent": "writer",
       "status": "ok",
-      "duration_ms": 37597
+      "duration_ms": 29511
     },
     {
       "agent": "verifier",
-      "status": "ok",
-      "duration_ms": 0,
-      "issues_count": 0,
-      "issues": null
+      "status": "blocked",
+      "duration_ms": 1,
+      "issues_count": 1,
+      "issues": [
+        {
+          "type": "missing_evidence_refs",
+          "detail": "Action #3 ('Provide psychosocial and environmental interventions') has no evidence_refs.",
+          "severity": "error"
+        }
+      ]
     }
   ],
-  "total_ms": 61183
+  "total_ms": 44732
 }
